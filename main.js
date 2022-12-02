@@ -1,10 +1,14 @@
 function maior() {
+  let formValido = false;
+
   var numero1 = parseFloat(document.getElementById("numA").value);
   var numero2 = parseFloat(document.getElementById("numB").value);
+  formValido = numero1 < numero2
+  const mensagemSucesso = `B e igual ${numB.value} A e igual ${numA.value} formulario enviado B maior que A`;
 
-  if (numero1 < numero2){
-  document.write("formulario enviado B maior que A");
+  if (formValido){
+    alert(mensagemSucesso);
 } else {
-  document.write("falha nao enviado A e maior que B");
+    alert("falha nao enviado A e maior que B");
 } 
 }      
