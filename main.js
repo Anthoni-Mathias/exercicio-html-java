@@ -1,22 +1,10 @@
-const form = document.getElemenById("form-number");
+function maior() {
+  var numero1 = parseFloat(document.getElementById("numA").value);
+  var numero2 = parseFloat(document.getElementById("numB").value);
 
-function validaNumero(numero) {
-  const numeroComoArray = numero.split(' ');
-  return numeroComoArray.length >= 2;
-}
-
-function validate(e) {
-  e.preventDefault();
-
-  const a = document.getElementById("a");
-  let valid = true;
-
-  if (!a.value) {
-    const numberError = document.getElementById("numberError");
-    numberError.classList.add("visible");
-    a.classList.add("invalid");
-    numberError.setAttribute("aria-hidden", false);
-    numberError.setAttribute("aria-invalid", true);
-  }
-  return valid;
-}
+  if (numero1 < numero2){
+  document.write("formulario enviado B maior que A");
+} else {
+  document.write("falha nao enviado A e maior que B");
+} 
+}      
